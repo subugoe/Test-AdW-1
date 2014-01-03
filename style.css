@@ -2,62 +2,67 @@
 /* CSS Document */
 .nav-menu {
 	margin:0px;
-	position:static;
+	position:absolute;
 	float:left;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	list-style:none;
-	color:#000;
+	color:#fff;
+	background:url(Startseite-Dateien/ico-MenuF.png) no-repeat;
+	padding: 10px 0 0px 00px;
+	font-weight:bold;
+	width:95px;
 }
+
 .nav-menu:after {
 	clear:both;
 	visibility:collapse;
 	display:inherit;
 }
+
 .nav-menu:hover {
 	background:url(Startseite-Dateien/ico-MenuF-over.png) no-repeat;
 	color:#000;
 }
 
-.nav-menu ul {
-	list-style:none;
-	font-weight:bold;
-	font-size:14px;
-	margin:0;
-	padding:10px 0px 0px 0px;
-	background:url(Startseite-Dateien/ico-MenuF.png) no-repeat;
-	color:#FFF;
+.nav-menu li {
+	float:left;
+	width: 95px;
+	height:39px;
+	padding-left:10px;
 }
-.nav-menu ul:after{
-	padding-bottom:30px;	
+
+.nav-menu li ul {
+	display:none;
+}
+
+.nav-menu li:hover ul {
+	padding-left: 0;
+	float:block;
+	width:200px;
 	display:block;
 
 }
-.nav-menu ul li {
-	position:relative;
-	line-height:15px;
-	width:200px;
-	display:inline;
+
+.nav-menu li ul:after {
+    content: " ____________________ "; 
+	color:#b80026;
+	padding-bottom:15px;
 }
-.nav-menu ul li:after {
-	padding-left:10px;
-    content: " ______________ "; color:#b80026;
+
+.nav-menu li ul:last-child:after {
+    content: "";
 }
-.nav-menu ul li a {
-	display:block;
+
+.nav-menu li ul:first-child {
+	padding-top:15px;
+}
+
+.nav-menu li ul a{
 	text-decoration:none;
-	padding: 10px 10px 10px;
-	font-size: 14px;
 	color:#000;
 }
-.nav-menu-head{
-	padding-left:10px;
+.nav-menu li ul a:hover{
+	text-decoration:underline;
+	color:#b80026;
 }
-.nav-menu-border {
-	border:solid;
-	border-width:1px;
-	border-color:#b80026;
-	background-color:#fff;
-	margin-top:11px;	
-}
-

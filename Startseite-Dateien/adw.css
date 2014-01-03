@@ -797,6 +797,7 @@ figcaption.csc-textpic-caption {
   padding: 0;
   width: 840px;
   overflow: hidden;
+  margin-left:95px;
 }
 .nav-breadcrumb li {
   float: left;
@@ -839,70 +840,82 @@ figcaption.csc-textpic-caption {
   margin-top: -20px;
 }
 
-/*@Mustafa: Added on 04.12.2013: "firstM"*/
+/*======================================================================
+@Mustafa: Added on 04.12.2013 
+=======================================================================*/
 
 .nav-menu {
 	margin:0px;
-	position:static;
 	float:left;
-}
-.nav-menu ul {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
 	list-style:none;
-	font-weight:bold;
-	font-size:14px;
-	margin:0;
-	padding:10px 0px 0px 0px;
+	color:#fff;
 	background:url(ico-MenuF.png) no-repeat;
-	color:#FFF;
-	width:96px;
+	padding: 10px 0 0px 00px;
+	font-weight:bold;
+	width:95px;
+	position:absolute;
 }
-.nav-menu ul:a{
-	color:fff;
-	text-decoration:none;	
-}
-.nav-menu: after {
+
+.nav-menu:after {
 	clear:both;
-	visibility:hidden;
+	visibility:collapse;
 	display:inherit;
 }
+
 .nav-menu:hover {
 	background:url(ico-MenuF-over.png) no-repeat;
 	color:#000;
 }
-.nav-menu ul:after{
-	padding-bottom:30px;	
-}
-.nav-menu ul li {
-	position:relative;
-	line-height:15px;
-	width:200px;
-	display:inline;
-}
-.nav-menu ul li:after {
+
+.nav-menu li {
+	float:left;
+	width: 95px;
+	height:39px;
 	padding-left:10px;
-    content: " ______________ "; color:#b80026;
 }
-.nav-menu ul li a {
+
+.nav-menu li ul {
+	display:none;
+	
+}
+
+.nav-menu li:hover ul {
+	padding-left: 0;
+	float:block;
+	width:200px;
 	display:block;
+	
+}
+
+.nav-menu li ul:after {
+    content: " ____________________ "; 
+	color:#b80026;
+	padding-bottom:15px;
+}
+
+.nav-menu li ul:last-child:after {
+    content: "";
+}
+
+.nav-menu li ul:first-child {
+	padding-top:15px;
+}
+
+.nav-menu li ul a{
 	text-decoration:none;
-	padding: 10px 10px 10px;
-	font-size: 14px;
 	color:#000;
+}
 
+.nav-menu li ul a:hover{
+	text-decoration:underline;
+	color:#b80026;
 }
-.nav-menu-head{
-	padding-left:10px;
-}
-.nav-menu-border {
-	border:solid;
-	border-width:1px;
-	border-color:#b80026;
-	background-color:#fff;
-	margin-top:11px;	
-	width:200px;
+/*======================================================================
+							||>>ENDE<<||
+======================================================================*/
 
-}
-/**/
 .nav-breadcrumb li.cur a {
   background: #c90230 url("breadcrumb-sprite.png") no-repeat 0 -78px;
   padding: 0 5px 0 25px;
