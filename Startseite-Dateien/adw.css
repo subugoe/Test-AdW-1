@@ -844,8 +844,11 @@ figcaption.csc-textpic-caption {
 @Mustafa: Added on 04.12.2013 
 =======================================================================*/
 
+@charset "utf-8";
+/* CSS Document */
 .nav-menu {
 	margin:0px;
+	position:absolute;
 	float:left;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
@@ -855,7 +858,8 @@ figcaption.csc-textpic-caption {
 	padding: 10px 0 0px 00px;
 	font-weight:bold;
 	width:95px;
-	position:absolute;
+	padding-left:10px;
+	z-index:1000;
 }
 
 .nav-menu:after {
@@ -867,32 +871,56 @@ figcaption.csc-textpic-caption {
 .nav-menu:hover {
 	background:url(ico-MenuF-over.png) no-repeat;
 	color:#000;
+
 }
 
 .nav-menu li {
 	float:left;
 	width: 95px;
 	height:39px;
-	padding-left:10px;
+	z-index:1000;
+
 }
 
 .nav-menu li ul {
 	display:none;
-	
 }
 
 .nav-menu li:hover ul {
-	padding-left: 0;
 	float:block;
-	width:200px;
+	width:180px;
 	display:block;
-	
+	line-height:17px;
+	padding-left:0px;
+	z-index:1000;
+	background-color:#fbf7f6;
+
+}
+
+#content-nav-menu{
+	margin-left:-10px;
+	background-color:#fbf7f6;
+	border:thin solid #b80026;
+	margin-top:13px;
+	width:180px;
+	display:block;
+	z-index:999;
+
 }
 
 .nav-menu li ul:after {
-    content: " ____________________ "; 
+	content: " ____________________";
 	color:#b80026;
+	padding-left:10px;
 	padding-bottom:15px;
+	line-height:5px;
+	background-color:#fbf7f6;
+	z-index:1000;
+
+}
+
+.nav-menu li ul:last-child {
+	line-height:17px;
 }
 
 .nav-menu li ul:last-child:after {
@@ -900,18 +928,19 @@ figcaption.csc-textpic-caption {
 }
 
 .nav-menu li ul:first-child {
-	padding-top:15px;
 }
 
 .nav-menu li ul a{
 	text-decoration:none;
 	color:#000;
-}
+	padding-left:10px;
 
+}
 .nav-menu li ul a:hover{
 	text-decoration:underline;
 	color:#b80026;
 }
+
 /*======================================================================
 							||>>ENDE<<||
 ======================================================================*/

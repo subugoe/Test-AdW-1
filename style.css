@@ -12,6 +12,7 @@
 	padding: 10px 0 0px 00px;
 	font-weight:bold;
 	width:95px;
+	padding-left:10px;
 }
 
 .nav-menu:after {
@@ -23,13 +24,13 @@
 .nav-menu:hover {
 	background:url(Startseite-Dateien/ico-MenuF-over.png) no-repeat;
 	color:#000;
+
 }
 
 .nav-menu li {
 	float:left;
 	width: 95px;
 	height:39px;
-	padding-left:10px;
 }
 
 .nav-menu li ul {
@@ -37,17 +38,34 @@
 }
 
 .nav-menu li:hover ul {
-	padding-left: 0;
 	float:block;
-	width:200px;
+	width:180px;
 	display:block;
+	line-height:30px;
+	padding-left:0px;
 
 }
 
+#content-nav-menu{
+	margin-left:-10px;
+	background-color:#fbf7f6;
+	border:thin solid #b80026;
+	margin-top:13px;
+	width:180px;
+	display:block;
+}
+
 .nav-menu li ul:after {
-    content: " ____________________ "; 
+	content: " ____________________";
 	color:#b80026;
+	padding-left:10px;
 	padding-bottom:15px;
+	line-height:5px;
+	background:#fbf7f6;
+}
+
+.nav-menu li ul:last-child {
+	line-height:25px;
 }
 
 .nav-menu li ul:last-child:after {
@@ -55,12 +73,13 @@
 }
 
 .nav-menu li ul:first-child {
-	padding-top:15px;
 }
 
 .nav-menu li ul a{
 	text-decoration:none;
 	color:#000;
+	padding-left:10px;
+
 }
 .nav-menu li ul a:hover{
 	text-decoration:underline;
