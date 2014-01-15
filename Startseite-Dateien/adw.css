@@ -844,109 +844,87 @@ figcaption.csc-textpic-caption {
 @Mustafa: Added on 04.12.2013 
 =======================================================================*/
 
-@charset "utf-8";
-/* CSS Document */
-.nav-menu {
-	font-family: Arial, Helvetica, sans-serif;
-	margin:0px;
-	position:absolute;
-	float:left;
-	font-size: 14px;
+#nav-menu-container {
+	margin:0;
+}
+
+ul.nav-menu, ul.nav-menu ul{
 	list-style:none;
-	color:#fff;
-	background:url(ico-MenuF.png) no-repeat;
+    margin:0;
+	padding:0;
+    position: relative;
 	font-weight:bold;
-	width:95px;
-	z-index:1000;
-	
 }
-
-.nav-menu:after {
-	clear:both;
-	visibility:collapse;
-	display:inherit;
-}
-
-.nav-menu:hover {
-	background:url(ico-MenuF-over.png) no-repeat;
-	color:#000;
-}
-
-.nav-menu ul {
-	float:left;
-	width: 95px;
+		
+ul.nav-menu li{ 
+    position: relative; 
+    float: left; 
+    zoom: 1; /*Needed for IE*/
 	height:39px;
-	z-index:1000;
-	padding-left:10px;
-	padding-top:10px;
-}
-
-.nav-menu ul li {
-	display:none;
-}
-
-.nav-menu ul:hover li {
-	float:block;
-	width:180px;
-	display:block;
-	line-height:17px;
-	z-index:1000;
-	background-color:#fbf7f6;
-	padding-bottom:15px;
-}
-
-#content-nav-menu{
-	margin-left:-9px;
-	background-color:#fbf7f6;
-	margin-top:12px;
-	width:180px;
-	display:block;
+	width:95px;
+	background:url(ico-MenuF.png);
 	z-index:999;
-	padding:1px;
-	border-top-style: none;
-	border-right-style: solid;
-	border-bottom-style: solid;
-	border-left-style: solid;
-	border-top-color: #b80026;
-	border-right-color: #b80026;
-	border-bottom-color: #b80026;
-	border-left-color: #b80026;
-	border-top-width: thin;
-	border-right-width: thin;
-	border-bottom-width: thin;
-	border-left-width: thin;
 }
 
-.nav-menu ul li:after {
-	content: " ____________________";
-	color:#b80026;
-	line-height:5px;
-	background-color:#fbf7f6;
-	z-index:1000;
-	padding-left:10px;
-}
-
-.nav-menu ul li:last-child {
-	line-height:17px;
-}
-
-.nav-menu ul li:last-child:after {
-    content: "";
-}
-
-.nav-menu ul li:first-child {
-	padding-top:10px;
-}
-
-.nav-menu ul li a{
-	text-decoration:none;
+ul.nav-menu li:hover{ 
+	background:url(ico-MenuF-over.png);
 	color:#000;
-	padding-left:10px;
-
 }
-.nav-menu ul li a:hover{
-	text-decoration:underline;
+        
+ul.nav-menu li a{
+	display: block; 
+	padding: 10px 0 10px 10px; 
+	color:#fff;
+	font-family: Arial, Times New Roman, Tahoma;
+	font-size: 14px;
+	text-decoration:none;
+}
+
+ul.nav-menu li a:hover{
+	color:#000;
+}
+
+/*for 2nd and more level*/
+ul.nav-menu ul{ 
+	display:none;
+	position: absolute;
+	width: 150px; 
+    border:1px solid #b80026;
+    background:#fbf7f6;
+	top: 100%;
+}
+
+ul.nav-menu ul li{ 
+	background: #fbf7f6; 
+	color: #000; 
+	border-bottom: 1px solid #CCC; 
+	float: none;
+	padding:5px 0 5px;
+	width:150px;
+	left:0px;
+}
+
+ul.nav-menu ul li:hover{ 
+	background: #fbf7f6; 
+}
+
+ul.nav-menu ul li:last-child{
+	border:none;
+}
+
+ul.nav-menu ul li a{ 
+	width: 130px; 
+	display: block; 
+	color:#000000;
+	background-color:#fbf7f6;
+	font-weight:bold;
+} 
+ul.nav-menu ul li a:hover{ 
 	color:#b80026;
+} 
+
+ul.nav-menu li:hover ul { 
+	display:block;
 }
 
 /*======================================================================
