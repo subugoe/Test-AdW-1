@@ -797,7 +797,7 @@ figcaption.csc-textpic-caption {
   padding: 0;
   width: 840px;
   overflow: hidden;
-  margin-left:95px;
+  margin-left:-10px;
 }
 .nav-breadcrumb li {
   float: left;
@@ -861,7 +861,7 @@ ul.nav-menu li{
     float: left; 
     zoom: 1; /*Needed for IE*/
 	height:39px;
-	width:95px;
+	width:100px;
 	background:url(ico-MenuF.png);
 	z-index:999;
 }
@@ -869,6 +869,10 @@ ul.nav-menu li{
 ul.nav-menu li:hover{ 
 	background:url(ico-MenuF-over.png);
 	color:#000;
+}
+
+.nav-menu: hover{
+	color:#b80026;
 }
         
 ul.nav-menu li a{
@@ -881,26 +885,27 @@ ul.nav-menu li a{
 }
 
 ul.nav-menu li a:hover{
-	color:#000;
+	color:#b80026;
 }
 
 /*for 2nd and more level*/
 ul.nav-menu ul{ 
 	display:none;
 	position: absolute;
-	width: 150px; 
+	width: 200px; 
     border:1px solid #b80026;
-    background:#fbf7f6;
+	border-top:none;
+	background:#fbf7f6;
 	top: 100%;
 }
 
 ul.nav-menu ul li{ 
-	background: #fbf7f6; 
+	background: #fbf7f6;
 	color: #000; 
-	border-bottom: 1px solid #CCC; 
+	border-bottom: 1px solid #d5d3cd; 
 	float: none;
 	padding:5px 0 5px;
-	width:150px;
+	width:200px;
 	left:0px;
 }
 
@@ -913,12 +918,13 @@ ul.nav-menu ul li:last-child{
 }
 
 ul.nav-menu ul li a{ 
-	width: 130px; 
+	width: 190px; 
 	display: block; 
 	color:#000000;
 	background-color:#fbf7f6;
 	font-weight:bold;
 } 
+
 ul.nav-menu ul li a:hover{ 
 	color:#b80026;
 } 
