@@ -846,6 +846,7 @@ figcaption.csc-textpic-caption {
 
 #nav-menu-container {
 	margin:0;
+	background:url(ico-MenuF.png);
 }
 
 ul.nav-menu, ul.nav-menu ul{
@@ -854,26 +855,30 @@ ul.nav-menu, ul.nav-menu ul{
 	padding:0;
     position: relative;
 	font-weight:bold;
+	color:#FFF;
 }
-		
+#nav-men-btn{
+	height:29px;
+	width:80px;
+	padding: 10px 10px 0;
+	font-size: 14px;
+}		
+
 ul.nav-menu li{ 
     position: relative; 
     float: left; 
     zoom: 1; /*Needed for IE*/
+	z-index:999;
 	height:39px;
 	width:100px;
-	background:url(ico-MenuF.png);
-	z-index:999;
+
 }
 
 ul.nav-menu li:hover{ 
 	background:url(ico-MenuF-over.png);
-	color:#000;
-}
-
-.nav-menu: hover{
 	color:#b80026;
 }
+
         
 ul.nav-menu li a{
 	display: block; 
