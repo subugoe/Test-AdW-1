@@ -874,7 +874,7 @@ ul.nav-menu li{
 
 }
 
-ul.nav-menu li:hover{ 
+ul.nav-menu li:hover, ul.nav-menu li:target{ 
 	background:url(ico-MenuF-over.png);
 	color:#b80026;
 }
