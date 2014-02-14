@@ -302,34 +302,9 @@ oder bietet vertiefende Einblicke in spezielle Wissensgebiete.
 </footer>
 <script src="Startseite-Dateien/jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
-  var bodyBound = false;
-  var container;
-
-  if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/iPad/i))
-  {
-      nav-menu-container = $("#container");
-
-       // Provoke iOS :hover event
-      $("a.someLink").on("mouseover", handleHoverClick);
-  }
-
-  function handleClose(event)
-  {
-      container.off("click", handleClose);
-
-      bodyBound = false;
-  }
-
-  function handleHoverClick(event)
-  {
-      if (!bodyBound)
-      {
-          bodyBound = true;
-
-          // Somehow, just calling this function—even if empty—closes the :hover
-          container.on("click", handleClose);
-      }
-  }
+    $('.nav-menu, .clickable').live('touchend', function(){
+    $(this).mouseout();
+    });
 </script>
 
 <script type="text/javascript">
