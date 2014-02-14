@@ -302,25 +302,9 @@ oder bietet vertiefende Einblicke in spezielle Wissensgebiete.
 </footer>
 <script src="Startseite-Dateien/jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
-    $(document).ready(function() {
-        if(navigator.platform == "iPhone" || navigator.platform == "IPhone" || navigator.platform == "IPad" || navigator.platform == "iPad") {
-            $("a").each(function() { // have to use an `each` here - either a jQuery `each` or a `for(...)` loop
-                var onClick; // this will be a function
-                var firstClick = function() {
-                    onClick = secondClick;
-                    return false;
-                };
-                var secondClick = function() {
-                    onClick = firstClick;
-                    return true;
-                };
-                onClick = firstClick;
-                $(this).click(function() {
-                    return onClick();
-                });
-            });
-        }
-    });
+  if (!("ontouchstart" in document.documentElement)){ 
+      document.documentElement.nav-menu += " no-touch"; 
+  }
 </script>
 
 <script type="text/javascript">
