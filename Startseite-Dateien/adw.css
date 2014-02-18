@@ -879,14 +879,8 @@ ul.nav-menu {
 }
 
 .nav-menu:hover ul.nav-menu{ 
-  float: left; 
   zoom: 1; /*Needed for IE*/
   z-index:999;
-  display:block;
-  position:absolute;
-}
-
-ul.nav-menu:hover {
   display:block;
   position:absolute;
 }
@@ -895,23 +889,17 @@ ul.nav-menu li{
   background: #fbf7f6;
   color: #000; 
   border-bottom: 1px solid #d5d3cd; 
-  float: none;
   padding:5px 0 5px;
-  width:200px;
-  left:0px;
 }  
      
 ul.nav-menu li a{
   display: block; 
   padding:10px 10px 10px; 
   color:#fff;
-  font-family: Arial, Times New Roman, Tahoma;
-  font-size: 14px;
   text-decoration:none;
   width: 180px; 
   color:#000000;
   background-color:#fbf7f6;
-  font-weight:bold;
 }
 
 ul.nav-menu li a:hover{
