@@ -107,6 +107,7 @@ jQuery(function() {
 	/* closes the tool mode menu */
 	function closeToolMenu() {
 		jQuery('.nav-menu ul').hide();
+		jQuery('.nav-menu').hide();
 	}
 
 	/**
