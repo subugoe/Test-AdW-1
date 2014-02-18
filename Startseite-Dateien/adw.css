@@ -349,7 +349,7 @@ ol {
 }
 
 /**
- * 	 Headings
+ *   Headings
  */
 h1, .h1 {
   font: normal 1.625em / 28px Cambria, Georgia, serif;
@@ -391,7 +391,7 @@ h4 + address {
 }
 
 /**
- *	Links
+ *  Links
  */
 a {
   color: #c90230;
@@ -843,103 +843,75 @@ figcaption.csc-textpic-caption {
 /*======================================================================
 @Mustafa: Added on 04.12.2013 
 =======================================================================*/
-
 #nav-menu-container {
-	margin:0;
-	background:url(ico-MenuF.png);
+  background:url(ico-MenuF.png) no-repeat;
+  margin:0;
+  color: #FFF;
 }
 
-ul.nav-menu, ul.nav-menu ul{
-	list-style:none;
-    margin:0;
-	padding:0;
-    position: relative;
-	font-weight:bold;
-	color:#FFF;
+.nav-menu{
+  width: 100px;
+  height:29px;
+  font-size: 14px;
+  font-weight: bold;
+  padding-left:10px;
+  padding-top:10px;
 }
-#nav-men-btn{
-	height:29px;
-	width:80px;
-	padding: 10px 10px 0;
-	font-size: 14px;
-}		
 
+ul.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index:999;
+  display:none;
+  border:1px solid #b80026;
+  border-top:none;
+  width:200px;
+  height:385px;
+  top:100%;
+  margin-left:-9px;
+}
+
+.nav-menu:hover { 
+  background:url(ico-MenuF-over.png);
+  color:#b80026;
+}
+
+.nav-menu:hover ul.nav-menu{ 
+  zoom: 1; /*Needed for IE*/
+  z-index:999;
+  display:block;
+  position:absolute;
+}
+ 
 ul.nav-menu li{ 
-    position: relative; 
-    float: left; 
-    zoom: 1; /*Needed for IE*/
-	z-index:999;
-	height:39px;
-	width:100px;
-
-}
-
-ul.nav-menu li:hover, ul.nav-menu li:target{ 
-	background:url(ico-MenuF-over.png);
-	color:#b80026;
-}
-
-        
+  background: #fbf7f6;
+  color: #000; 
+  border-bottom: 1px solid #d5d3cd; 
+  padding:5px 0 5px;
+}  
+     
 ul.nav-menu li a{
-	display: block; 
-	padding: 10px 0 10px 10px; 
-	color:#fff;
-	font-family: Arial, Times New Roman, Tahoma;
-	font-size: 14px;
-	text-decoration:none;
+  display: block; 
+  padding:10px 10px 10px; 
+  color:#fff;
+  text-decoration:none;
+  width: 180px; 
+  color:#000000;
+  background-color:#fbf7f6;
 }
 
 ul.nav-menu li a:hover{
-	color:#b80026;
+  color:#b80026;
 }
 
-/*for 2nd and more level*/
-ul.nav-menu ul{ 
-	display:none;
-	position: absolute;
-	width: 200px; 
-    border:1px solid #b80026;
-	border-top:none;
-	background:#fbf7f6;
-	top: 100%;
-}
-
-ul.nav-menu ul li{ 
-	background: #fbf7f6;
-	color: #000; 
-	border-bottom: 1px solid #d5d3cd; 
-	float: none;
-	padding:5px 0 5px;
-	width:200px;
-	left:0px;
-}
-
-ul.nav-menu ul li:hover{ 
-	background: #fbf7f6; 
-}
-
-ul.nav-menu ul li:last-child{
-	border:none;
-}
-
-ul.nav-menu ul li a{ 
-	width: 190px; 
-	display: block; 
-	color:#000000;
-	background-color:#fbf7f6;
-	font-weight:bold;
-} 
-
-ul.nav-menu ul li a:hover{ 
-	color:#b80026;
-} 
-
-ul.nav-menu li:hover ul { 
-	display:block;
+ul.nav-menu li:last-child{
+  border:none;
 }
 
 /*======================================================================
-							||>>ENDE<<||
+              ||>>ENDE<<||
 ======================================================================*/
 
 .nav-breadcrumb li.cur a {
@@ -2325,5 +2297,5 @@ p.back a:hover, p.back a:active, p.back a:focus {
 
 /* fix h2 positioning in tx_find */
 #tx_find h2 {
-	margin: 0;
+  margin: 0;
 }
