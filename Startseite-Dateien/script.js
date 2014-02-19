@@ -107,7 +107,6 @@ jQuery(function() {
 	/* closes the tool mode menu */
 	function closeToolMenu() {
 		jQuery('.nav-menu ul').hide();
-		jQuery('.nav-menu').hide();
 	}
 
 	/**
@@ -148,6 +147,7 @@ jQuery(function() {
 	*/
 	jQuery('.nav-menu').click(function() {
 		if (jQuery('.nav-menu ul').is(':visible')) {
+			jQuery('.nav-menu').removeClass( "hover" );
 			closeToolMenu();
 		} else {
 			jQuery('.nav-menu ul').show();
